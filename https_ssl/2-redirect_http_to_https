@@ -1,0 +1,5 @@
+frontend web_http
+	bind *:80
+	http-request redirect scheme https code 301 unless { ssl_fc }
+	http-request set-header X-Forwarded-Proto http
+	default_backend web_backend
