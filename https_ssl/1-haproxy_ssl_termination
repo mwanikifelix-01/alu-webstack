@@ -25,7 +25,7 @@ frontend web_http
 	default_backend web_backend
 
 frontend web_https
-	bind *:443 ssl crt /etc/haproxy/certs/www.YOURDOMAIN.pem
+	bind *:443 ssl crt /etc/haproxy/certs/www.mwanikifelix-01.tech.pem
 	http-request set-header X-Forwarded-Proto https
 	default_backend web_backend
 
